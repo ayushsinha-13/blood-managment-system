@@ -1,0 +1,111 @@
+*{
+    text-align: center;
+}
+hr{
+    border-width: 20px;
+}
+
+.exp1{
+    /* background-color: red; */
+    background-image: linear-gradient(rgba(250, 172, 172, 0.8), rgb(0, 0, 0, 0.5)), url("../images/Background/home.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* padding: 0; */
+}
+
+.btn{
+    font-weight: 600;
+}
+
+.head{
+    /* background-color: red; */
+    margin-top: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 50px;
+    border-radius: 10px;
+    opacity: 90%;
+    background-color: rgb(241, 59, 59);
+    /* background-color: rgb(255, 23, 0); */
+    /* background-color: deeppink; */
+}
+
+/* Table - Home Page */
+
+/* Table Structure */
+.table-home{
+    margin-top: 5rem;
+    /* border: 3px solid black; */
+    border-radius: 20px;
+    width: 55%;
+    height: 52%;
+    padding: 1rem;
+    background-color: #000000;
+    backdrop-filter: blur(2px);
+    opacity: 70%;
+}
+
+/* Table Head */
+.home-table-head{
+    font-family: 'Jost', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+}
+/* Table Content */
+input{
+    width: 100%;
+}
+
+.hints{
+    margin-top: 1rem;
+    font-size: 15px;
+    text-align: justify;
+    font-weight: 500;
+    color: white;
+}
+.head-content{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    color: white;
+}
+.submit-btn{
+    margin-top: 2rem;
+}
+
+#donor{
+    color: rgb(153, 164, 244);
+    font-size: 50px;
+    text-transform:uppercase;
+}
+#recipient{
+    color: red;
+    font-size: 50px;
+    text-transform:uppercase;
+}
+
+/* Status Bar */
+.status{
+    margin-top: 3rem;
+    
+}
+.news-box{
+    margin-bottom: 1rem;
+    border: 2px solid black;
+}
+#admin{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+#news-head{
+    font-family: 'Jost', sans-serif;
+    font-size: 50px;
+    font-weight: 500;
+}
+#right{
+    height: 100vh;
+    background-image: linear-gradient(rgb(241, 59, 59,1),rgb(232, 66, 66),rgba(247, 112, 112, 0.8));
+    /* background-image: linear-gradient(deeppink,white); */
+}

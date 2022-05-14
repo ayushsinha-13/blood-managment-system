@@ -1,0 +1,55 @@
+*{
+    background-color: #CDB699;
+}
+body{
+    background-color: #CDB699;
+    text-align: center;
+}
+
+.head{
+    /* background-color: red; */
+    margin-top: 2rem;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 50px;
+    border-radius: 10px;
+    opacity: 90%;
+    background-color: rgb(241, 59, 59);
+    /* background-color: rgb(255, 23, 0); */
+    /* background-color: deeppink; */
+}
+
+.image{
+    margin-top: 5rem;
+    width: 200px;
+}
+.message{
+    padding-top: 2rem;
+    font-size: 30px;
+}
+.id{
+    margin-top: 2rem;
+    background-color: #000000;
+    backdrop-filter: blur(2px);
+    opacity: 70%;
+    color: #fff;
+    width: 40%;
+    border-radius: 10px;
+
+    
+}
+#id{
+    text-align: left;
+    font-size: 60px;
+    background-color: #000000;
+    backdrop-filter: blur(2px);
+    opacity: 70%;
+    color: #CDB699;
+}
+#code{
+    font-size: 59px;
+    background-color: #000000;
+    color: yellow;
+}

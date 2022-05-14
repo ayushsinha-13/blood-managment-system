@@ -1,0 +1,72 @@
+body{
+    background-color: #CDB699;
+    text-align: center;
+}
+button{
+    border: 0;
+    background-color: #CDB699;
+}
+
+.container-fluid{
+    padding: 0;
+}
+.nav-back-button{
+    margin-top: 2.4rem;
+}
+.head{
+    /* background-color: red; */
+    margin-top: 2rem;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 50px;
+    border-radius: 10px;
+    opacity: 90%;
+    background-color: rgb(241, 59, 59);
+    margin-left: 0;
+}
+.title{
+    margin-top: 1rem;
+    font-size: 70px;
+    font-weight: 500;
+    text-decoration: underline;
+}
+.title-form{
+    margin-top: 1rem;
+    font-size: 40px;
+}
+.list{
+    text-align: center;
+    width: 50%;
+}
+
+.box{
+    margin: auto;
+    margin-top: 2rem;
+    background-color: #100f0f;
+    border-radius: 10px;
+}
+
+/* FORM */
+#Hospital-Name{
+    font-weight: 500;
+}
+
+
+/* LIST */
+
+#address{
+    font-size: 30px;
+    text-align: justify;
+    color: #fff;
+}
+#rating{
+    margin-top: 1.8rem;
+    text-align: left;
+    color: rgb(252, 252, 0);
+}
+#button{
+    margin-top: 1.5rem;
+}
+
