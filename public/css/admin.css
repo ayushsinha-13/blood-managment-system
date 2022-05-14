@@ -1,0 +1,55 @@
+body{
+    background-color: #CDB699;
+    text-align: center;
+}
+button{
+    border: 0;
+    background-color: #CDB699;
+}
+.nav-back-button{
+    margin-top: 2rem;
+}
+.head{
+    /* background-color: red; */
+    margin-top: 2rem;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 50px;
+    border-radius: 10px;
+    opacity: 90%;
+    background-color: rgb(241, 59, 59);
+    margin-left: 0;
+}
+
+/* Menu */
+.menu{
+    margin-top: 0.5rem;
+    background-color: #1e1c1c;
+}
+
+
+/* Login Form */
+.login-form{
+    margin-top: 5rem;
+    width: max-content;
+    background-color: #171212;
+    border-radius: 10%;
+}
+.btn{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+#username{
+    padding-top: 1rem;
+}
+#password{
+    margin-top: 1rem;
+}
+
+/* Pages*/
+.table{
+    width: 70vw;
+    margin-top: 2rem;
+}

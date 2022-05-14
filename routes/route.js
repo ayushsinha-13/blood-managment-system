@@ -15,8 +15,21 @@ app.route('/')
 app.route('/status')
     .get((req,res)=> res.render('Status'))    
 
-app.route('/admin')
-    .get((req,res)=> res.render('Admin-Panel-Hospital')) 
+app.route('/admin-login')
+    .get((req,res)=> res.render('Admin-Login')) 
+    .post((req,res)=> res.redirect('/admin-hospital'))
+
+
+// ADMIN PANEL
+ app.route('/admin-hospital')
+    .get((req,res) => res.render('Admin-Panel-Hospital'))    
+ app.route('/admin-donor')
+    .get((req,res) => res.render('Admin-Panel-Donor'))    
+ app.route('/admin-recipient')
+    .get((req,res) => res.render('Admin-Panel-Recipient'))    
+ app.route('/admin-appointment')
+    .get((req,res) => res.render('Admin-Panel-Appointment'))    
+
     
 app.route('/confirmation')
     .get((req,res)=> res.render('Confirmation'))
