@@ -1,47 +1,87 @@
 *{
     text-align: center;
 }
-hr{
-    border-width: 20px;
+.btn{
+    font-size: 20px;
 }
 
-.exp1{
+.background-container{
     /* background-color: red; */
-    background-image: linear-gradient(rgba(250, 172, 172, 0.8), rgb(0, 0, 0, 0.5)), url("../images/Background/home.jpg");
+    background-image: linear-gradient(rgba(250, 172, 172, 0.8), rgb(0, 0, 0, 0.6)), url("../images/Background/home.jpg");
     background-repeat: no-repeat;
     background-position: center;
+    padding: 0;
     background-size: cover;
-    /* padding: 0; */
-}
-
-.btn{
-    font-weight: 600;
+    height: 100vh;
+    width: 100vw;
 }
 
 .head{
     /* background-color: red; */
-    margin-top: 2rem;
     font-family: 'Montserrat', sans-serif;
     color: white;
+    opacity: 90%;
+    background-color: rgb(255, 23, 0);
+    display: flex;
+}
+.head-title{
+    text-align: left;
     font-weight: 700;
     font-size: 50px;
-    border-radius: 10px;
-    opacity: 90%;
-    background-color: rgb(241, 59, 59);
-    /* background-color: rgb(255, 23, 0); */
-    /* background-color: deeppink; */
+    display: inline;
+    margin-left: 1rem;
+    flex: 3;
+}
+.head-menu{
+    flex: 1;
+    margin-top: 1rem;
+    margin-right: 2rem;
+    text-align: right;
+    width: max-content;
 }
 
-/* Table - Home Page */
+/* Menu */
+.offcanvas{
+    background-color: #000000;
+    opacity: 80%;
+}
+.offcanvas-title{
+    font-weight: 900;
+}
+
+/* Status Bar */
+#status{
+    margin-top: 1rem;
+}
+#close{
+    color: rgb(255, 23, 0);
+    background-color: #000000;
+}
+#offcanvasExampleLabel{
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    text-transform: uppercase;
+    color: yellow;
+}
+#id{
+    color: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+}
+#admin{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
 
 /* Table Structure */
 .table-home{
     margin-top: 5rem;
-    /* border: 3px solid black; */
-    border-radius: 20px;
-    width: 55%;
-    height: 52%;
     padding: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 20px;
+    width:fit-content ;
+    height: max-content;
     background-color: #000000;
     backdrop-filter: blur(2px);
     opacity: 70%;
@@ -52,60 +92,34 @@ hr{
     font-family: 'Jost', sans-serif;
     font-size: 30px;
     font-weight: 500;
-}
-/* Table Content */
-input{
-    width: 100%;
+    width: max-content;
 }
 
-.hints{
-    margin-top: 1rem;
-    font-size: 15px;
-    text-align: justify;
-    font-weight: 500;
-    color: white;
-}
+
+/* Table Content */
 .head-content{
     font-family: 'Ubuntu', sans-serif;
-    font-size: 30px;
     font-weight: 900;
     color: white;
 }
 .submit-btn{
     margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.home-table-content{
+    font-size: 30px;
 }
 
 #donor{
     color: rgb(153, 164, 244);
-    font-size: 50px;
+    text-align: center;
+    font-size: 70px;
     text-transform:uppercase;
 }
 #recipient{
+    padding-right: 5rem;
     color: red;
-    font-size: 50px;
+    text-align: center;
+    font-size: 70px;
     text-transform:uppercase;
-}
-
-/* Status Bar */
-.status{
-    margin-top: 3rem;
-    
-}
-.news-box{
-    margin-bottom: 1rem;
-    border: 2px solid black;
-}
-#admin{
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-#news-head{
-    font-family: 'Jost', sans-serif;
-    font-size: 50px;
-    font-weight: 500;
-}
-#right{
-    height: 100vh;
-    background-image: linear-gradient(rgb(241, 59, 59,1),rgb(232, 66, 66),rgba(247, 112, 112, 0.8));
-    /* background-image: linear-gradient(deeppink,white); */
 }

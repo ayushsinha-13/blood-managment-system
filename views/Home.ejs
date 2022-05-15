@@ -1,81 +1,68 @@
-<!-- Header files -->
-<%- include("partials/Header"); -%> 
+<%- include("Partials/Home"); -%> 
 
-    <title>Blood Management System</title>
-
-    <!-- All CDN Included -->
-    <%- include("partials/cdn_Files"); -%> 
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/home.css">
-    <!-- <link rel="stylesheet" href="css/background.css"> -->
-    
-</head>
-<body>
-    <div class="d-flex flex-column justify-content-center w-100 h-100">
-    <div class="container-fluid">
+<div class="container-fluid">
         <div class="row">
-            <div class="col col-lg-9 exp1">
+            <div class="col col-lg-12 background-container">
                 <div class="head">
-                    Blood Management System
+                        <div class="head-title">
+                            <i class="fa-solid fa-staff-aesculapius" style="color: #000000;"></i>
+                            Blood Management System
+                        </div>
+                        <div class="head-menu">
+                            <a class="btn btn-dark" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button">
+                                <i class="fa-solid fa-bars"></i>
+                            </a>
+                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample">
+                                <div class="offcanvas-header">
+                                  <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+                                  <button type="button" data-bs-dismiss="offcanvas" id="close"><i class="fa-solid fa-xmark fa-3x"></i></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                  <div>
+                                    <div id="status">
+                                        <form action="/" method="post">
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text"><i class="fa-solid fa-hashtag fa-2x"></i></span>
+                                                <input type="text" class="form-control" id="id" placeholder="Enter ID">
+                                            </div>
+                                            <button class="btn btn-primary">Check Status</button>
+                                        </form>
+                                        <div id="admin">
+                                            <form action="/admin-login" method="get">
+                                                <button class="btn btn-dark">Admin</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
                 </div>
-                <hr>
-                <div class="container table-home">
+                <div class="container-fluid table-home">
                     <div class="row home-table-head">
                         <div class="col col-lg-6" id="donor">Donor</div>
                         <div class="col col-lg-6" id="recipient">Recipient</div>
                     </div>
-                    <hr>
+                    <br>
                     <div class="row home-table-content">
-                        <div class="col col-lg-6">
+                        <div class="col col-lg-6 col-md-12">
                             <p class="head-content">Pincode</p>
                             <form action="/donor" method="post">
                                 <input type="text" class="form-control" name="pincode" id="pincode" placeholder="141002">
-                                <p class="hints">Search hospitals in your area to donate.</p>
                                 <button class="btn btn-primary submit-btn" type="submit">Register</button>
                             </form>
                         </div>
-                        <div class="col col-lg-6">
+                        <div class="col col-lg-6 col-md-12">
                             <p class="head-content">Blood Group</p>
                             <form action="/recipient" method="post">
                                 <input type="text" class="form-control" name="bloodGroup" id="bloodGroup" placeholder="O+, A+, B+, ..">
-                                <p class="hints">Search blood available in the hospitals.</p>
                                 <button class="btn btn-danger submit-btn" type="submit">Check</button>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col col-lg-3" id="right">
-                <div class="status">
-                    <!-- <i class="fa-solid fa-heart fa-beat" style="--fa-beat-scale: 5.0; animation-duration: 2s;"></i><br><br> -->
-                    <form action="/" method="post">
-                        <div class="input-group mb-3">
-                            <span class="input-group-text"><i class="fa-solid fa-hashtag"></i></span>
-                            <input type="text" class="form-control" placeholder="Enter ID">
-                        </div>
-                        <button class="btn btn-primary">Check Status</button>
-                    </form>
-                    <div id="admin">
-                        <form action="/admin-login" method="get">
-                            <button class="btn btn-dark">Admin</button>
-                        </form>
-                    </div>
-                </div>
-                <hr>
-                <div class="news">
-                    <p id="news-head">
-                        News
-                    </p>
-                    <div class="news-content">
-                        <div class="news-box">
-                            <p>Biggest threat</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-    </div>
 </div>
 </body>
 </html>
