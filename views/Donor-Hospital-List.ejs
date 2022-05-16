@@ -1,4 +1,4 @@
-<%- include("partials/Donor"); -%> 
+<%- include("partials/Donor"); -%>
 
 <!-- Code Goes Here -->
 <div class="contianer-fluid">
@@ -12,28 +12,29 @@
         </div>
         <div class="col col-lg-11">
             <div class="container head">
-                Blood Management System
+                Donor - <%= pincode %>
             </div>
         </div>
     </div>
 
-    <!-- Title of the page -->
-    <div class="container title">
-        Donor - {Pincode}
-    </div>   
-    
+
     <div class="container list">
         <div class="row box">
             <div class="col col-lg-7" id="address">
-                ABC HOSPITAL <br>
+                <div id="Hospital-Name">
+                    ABC HOSPITAL
+                </div>
                 01A, Delhi - 141002
             </div>
             <div class="col col-lg-3" id="rating">
                 <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
             </div>
             <div class="col col-lg-2" id="button">
-                <form action="/" method="get">
-                    <button class="btn btn-primary">Select</button>
+                <form action="/donor-form" method="get">
+                    <button class="btn btn-light">Select</button>
                 </form>
             </div>
         </div>

@@ -1,55 +1,27 @@
-button{
-    border: 0;
-    background-color: #CDB699;
+b{
+  color: #cea25c;
 }
 .container-fluid{
     padding: 0;
-}
-body{
-    background-color: #CDB699;
-    text-align: center;
-}
-.nav-back-button{
-    margin-top: 2rem;
-}
-.head{
-    /* background-color: red; */
-    margin-top: 2rem;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    font-weight: 700;
-    font-size: 50px;
-    border-radius: 10px;
-    opacity: 90%;
-    background-color: rgb(241, 59, 59);
-    margin-left: 0;
-}
-.title{
-    margin-top: 1rem;
-    font-size: 70px;
-    font-weight: 500;
-    text-decoration: underline;
 }
 .box{
     margin-top: 4rem;
     width: 50%;
     font-size: 35px;
-    background-color: #000000;
+    background-color: #1b1b1b;
     border-radius: 10px;
 }
 
 #left{
-    /* background-color: red; */
     text-align: left;
-    color: yellow;
+    color: #ae8b4c;
 }
 #right{
     text-align: center;
-    color: white;
+    color: #fff;
     border-left: 1px solid yellow;
 }
-
 #text-status{
     font-size: 30px;
+    color: #60b372;
 }

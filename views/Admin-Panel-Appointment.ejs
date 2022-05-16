@@ -1,4 +1,4 @@
-<%- include("partials/Admin"); -%> 
+<%- include("partials/Admin"); -%>
 
 <!-- Code Goes Here -->
     <div class="container table">
@@ -15,11 +15,21 @@
             </thead>
             <tbody>
                 <tr>
-                    <th scope="row">{Serial Number}</th>
-                    <td>{Name}</td>
-                    <td>{Phone no}</td>
-                    <td>{H-Code}</td>
-                    <td>{Status}</td>
+                    <th scope="row">1</th>
+                    <td>John</td>
+                    <td>22222 55555</td>
+                    <td>ABC4102011</td>
+                    <td>Approved</td>
+                    <td><form action="/admin-appointment" method="post">
+                        <button type="submit"><i class="fa-solid fa-check"></i></button>
+                    </form></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Rick</td>
+                    <td>77777 55555</td>
+                    <td>ABC4102011</td>
+                    <td>Pending</td>
                     <td><form action="/admin-appointment" method="post">
                         <button type="submit"><i class="fa-solid fa-check"></i></button>
                     </form></td>
