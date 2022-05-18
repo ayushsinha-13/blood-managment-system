@@ -1,6 +1,202 @@
-<%- include("partials/Recipient"); -%> 
+<%- include("partials/Recipient"); -%>
 
 <!-- Code Goes Here -->
-    
+<div class="contianer-fluid">
+    <div class="row">
+        <div class="col col-lg-1">
+            <div class="container nav-back-button">
+                <form action="/" method="get">
+                    <button><i class="fa-solid fa-circle-chevron-left fa-4x"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="col col-lg-11">
+            <div class="container head">
+                Recipient - <%=Blood%>
+            </div>
+        </div>
+    </div>
+
+    <% for(var i = 0; i<Hospital.length; i++){%>
+        <% if(Blood === "A+"){if(Hospital[i].Ap>0){%>
+            <div class="container list">
+                <div class="row box">
+                    <div class="col col-lg-7" id="address">
+                        <div id="Hospital-Name">
+                            <%=Hospital[i].name%>
+                        </div>
+                        <%=Hospital[i].address%> - <%=Hospital[i].pincode%>
+                    </div>
+                    <div class="col col-lg-3" id="rating">
+                        <% for(var j=1; j<=Hospital[i].rating; j++){%>
+                        <i class="fa-solid fa-star"></i>
+                        <%}%>
+                    </div>
+                    <div class="col col-lg-2" id="button">
+                        <form action="/recipient-hospital" method="post">
+                            <input type="text" name="hID" id="hID" style="display: none;" value="<%=Hospital[i].h_id%>">
+                            <button type="submit" class="btn btn-primary">Select</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <% }} else if(Blood === "A-"){if(Hospital[i].An>0){%>
+                <div class="container list">
+                    <div class="row box">
+                        <div class="col col-lg-7" id="address">
+                            <div id="Hospital-Name">
+                                <%=Hospital[i].name%>
+                            </div>
+                            <%=Hospital[i].address%> - <%=Hospital[i].pincode%>
+                        </div>
+                        <div class="col col-lg-3" id="rating">
+                            <% for(var j=1; j<=Hospital[i].rating; j++){%>
+                            <i class="fa-solid fa-star"></i>
+                            <%}%>
+                        </div>
+                        <div class="col col-lg-2" id="button">
+                            <form action="/recipient-form" method="get">
+                                <input type="text" name="hID" id="hID" style="display: none;" value="<%=Hospital[i].h_id%>">
+                                <button type="submit" class="btn btn-primary">Select</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            <% }} else if(Blood === "B+"){if(Hospital[i].Bp>0){%>
+                <div class="container list">
+                    <div class="row box">
+                        <div class="col col-lg-7" id="address">
+                            <div id="Hospital-Name">
+                                <%=Hospital[i].name%>
+                            </div>
+                            <%=Hospital[i].address%> - <%=Hospital[i].pincode%>
+                        </div>
+                        <div class="col col-lg-3" id="rating">
+                            <% for(var j=1; j<=Hospital[i].rating; j++){%>
+                            <i class="fa-solid fa-star"></i>
+                            <%}%>
+                        </div>
+                        <div class="col col-lg-2" id="button">
+                            <form action="/recipient-form" method="post">
+                                <input type="text" name="hID" id="hID" style="display: none;" value="<%=Hospital[i].h_id%>">
+                                <button type="submit" class="btn btn-primary">Select</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            <% }} else if(Blood === "B-"){if(Hospital[i].Bn>0){%>
+                <div class="container list">
+                    <div class="row box">
+                        <div class="col col-lg-7" id="address">
+                            <div id="Hospital-Name">
+                                <%=Hospital[i].name%>
+                            </div>
+                            <%=Hospital[i].address%> - <%=Hospital[i].pincode%>
+                        </div>
+                        <div class="col col-lg-3" id="rating">
+                            <% for(var j=1; j<=Hospital[i].rating; j++){%>
+                            <i class="fa-solid fa-star"></i>
+                            <%}%>
+                        </div>
+                        <div class="col col-lg-2" id="button">
+                            <form action="/recipient-form" method="post">
+                                <input type="text" name="hID" id="hID" style="display: none;" value="<%=Hospital[i].h_id%>">
+                                <button type="submit" class="btn btn-primary">Select</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            <% }} else if(Blood === "AB+"){if(Hospital[i].ABp>0){%>
+                <div class="container list">
+                    <div class="row box">
+                        <div class="col col-lg-7" id="address">
+                            <div id="Hospital-Name">
+                                <%=Hospital[i].name%>
+                            </div>
+                            <%=Hospital[i].address%> - <%=Hospital[i].pincode%>
+                        </div>
+                        <div class="col col-lg-3" id="rating">
+                            <% for(var j=1; j<=Hospital[i].rating; j++){%>
+                            <i class="fa-solid fa-star"></i>
+                            <%}%>
+                        </div>
+                        <div class="col col-lg-2" id="button">
+                            <form action="/recipient-hospital" method="post">
+                                <input type="text" name="hID" id="hID" style="display: none;" value="<%=Hospital[i].h_id%>">
+                                <button type="submit" class="btn btn-primary">Select</button>
+                            </form>
+                        </div>
+                    </div>
+                </div> 
+            <% }} else if(Blood === "AB-"){if(Hospital[i].ABn>0){%>
+                <div class="container list">
+                    <div class="row box">
+                        <div class="col col-lg-7" id="address">
+                            <div id="Hospital-Name">
+                                <%=Hospital[i].name%>
+                            </div>
+                            <%=Hospital[i].address%> - <%=Hospital[i].pincode%>
+                        </div>
+                        <div class="col col-lg-3" id="rating">
+                            <% for(var j=1; j<=Hospital[i].rating; j++){%>
+                            <i class="fa-solid fa-star"></i>
+                            <%}%>
+                        </div>
+                        <div class="col col-lg-2" id="button">
+                            <form action="/recipient-form" method="post">
+                                <input type="text" name="hID" id="hID" style="display: none;" value="<%=Hospital[i].h_id%>">
+                                <button type="submit" class="btn btn-primary">Select</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            <% }} else if(Blood === "O+"){if(Hospital[i].Op>0){%>
+                <div class="container list">
+                    <div class="row box">
+                        <div class="col col-lg-7" id="address">
+                            <div id="Hospital-Name">
+                                <%=Hospital[i].name%>
+                            </div>
+                            <%=Hospital[i].address%> - <%=Hospital[i].pincode%>
+                        </div>
+                        <div class="col col-lg-3" id="rating">
+                            <% for(var j=1; j<=Hospital[i].rating; j++){%>
+                            <i class="fa-solid fa-star"></i>
+                            <%}%>
+                        </div>
+                        <div class="col col-lg-2" id="button">
+                            <form action="/recipient-form" method="post">
+                                <input type="text" name="hID" id="hID" style="display: none;" value="<%=Hospital[i].h_id%>">
+                                <button type="submit" class="btn btn-primary">Select</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            <% }}else if(Blood === "O-"){if(Hospital[i].On>0){%>
+                <div class="container list">
+                    <div class="row box">
+                        <div class="col col-lg-7" id="address">
+                            <div id="Hospital-Name">
+                                <%=Hospital[i].name%>
+                            </div>
+                            <%=Hospital[i].address%> - <%=Hospital[i].pincode%>
+                        </div>
+                        <div class="col col-lg-3" id="rating">
+                            <% for(var j=1; j<=Hospital[i].rating; j++){%>
+                            <i class="fa-solid fa-star"></i>
+                            <%}%>
+                        </div>
+                        <div class="col col-lg-2" id="button">
+                            <form action="/recipient-form" method="post">
+                                <input type="text" name="hID" id="hID" style="display: none;" value="<%=Hospital[i].h_id%>">
+                                <button type="submit" class="btn btn-primary">Select</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            <% }} %> 
+    <%}%>
+</div>
+
 </body>
 </html>

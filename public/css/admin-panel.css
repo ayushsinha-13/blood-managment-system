@@ -1,0 +1,16 @@
+.menu{
+    margin-top: 0.7rem;
+    background-color: #1e1c1c;
+    height: max-content;
+    padding: 1rem 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+.table{
+    width: 70vw;
+    margin-top: 2rem;
+}
+
+.create-box{
+    margin-top: 0.5rem;
+}

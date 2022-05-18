@@ -1,27 +1,84 @@
-<%- include("partials/Donor"); -%> 
+<%- include("partials/Donor"); -%>
 
 <!-- Code Goes Here -->
 <div class="contianer-fluid">
     <div class="row">
         <div class="col col-lg-1">
             <div class="container nav-back-button">
-                <form action="/" method="get">
+                <form action="/donor" method="get">
                     <button><i class="fa-solid fa-circle-chevron-left fa-4x"></i></button>
                 </form>
             </div>
         </div>
         <div class="col col-lg-11">
             <div class="container head">
-                Blood Management System
+                ABC Hospital - <%= Hospital[0].pincode %>
             </div>
         </div>
     </div>
 
-    <!-- Title of the page -->
-    <div class="container title-form" id="Hospital-Form">
-        {Hospital Name} <br>
-        ID: {ID}
-    </div>  
+    <!-- Form -->
+    <form action="/donor-form" method="post">
+      <div class="container" id="form-box">
+            <div class="row">
+                <div class="col col-lg-4">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" class="form-control shadow rounded" id="name" placeholder="John"  name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age *</label>
+                        <input type="number" class="form-control shadow rounded" id="age" placeholder="21"  name="age" required>
+                    </div>
+                </div>
+                <div class="col col-lg-4">
+                  <div class="form-group">
+                    <label for="course">Blood Group *</label>
+                      <select class="form-control shadow rounded" name="bloodGroup" required>
+                        <option value="#" name="None">Select</option>
+                        <option value="Ap">A+</option>
+                        <option value="An">A-</option>
+                        <option value="Bp">B+</option>
+                        <option value="Bn">B-</option>
+                        <option value="ABp">AB+</option>
+                        <option value="ABn">AB-</option>
+                        <option value="Op">O+</option>
+                        <option value="On">O-</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="pincode">Pincode *</label>
+                        <input type="number" class="form-control shadow rounded" id="pincode" placeholder="140013"  name="pincode" required>
+                    </div>
+                </div>
+                <div class="col col-lg-4">
+                    <div class="form-group">
+                        <label for="phone">Phone *</label>
+                        <input type="number" class="form-control shadow rounded" id="phone" placeholder="+91 00000 11111"  name="phone" required>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <div class="form-check container left-align" id="terms">
+            <div class="row">
+                <div class="col col-lg-1">
+                    &nbsp;
+                </div>
+                <div class="col col-lg-1 check-col">
+                    <input class="" type="checkbox" value="" id="terms-checkbox">
+                </div>
+                <div class="col col-lg-7 term-col">
+                    <label class="form-check-label" for="terms-checkbox">
+                        I accept Terms & Conditions and I don't have any desease.
+                    </label>
+                </div>
+                <div class="col col-lg-3">
+                    <input type="text" name="hID" id="hID" style="display: none;" value="<%=Hospital[0].h_id%>">
+                    <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>
 </body>
 </html>

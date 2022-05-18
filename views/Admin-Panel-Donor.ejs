@@ -1,6 +1,31 @@
-<%- include("partials/Admin"); -%> 
+<%- include("partials/Admin"); -%>
 
 <!-- Code Goes Here -->
-    
+    <div class="container table">
+        <table class="table table-dark table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Blood Group</th>
+                    <th scope="col">Pincode</th>
+                    <th scope="col">Phone no.</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%var count = 1;%>
+                <%for(var i = Donor.length - 1; i >= 0 ; i--){%>
+                <tr>
+                    <th scope="row"><%=count%></th>
+                    <td><%=Donor[i].name%></td>
+                    <td><%=Donor[i].bloodGroup%></td>
+                    <td><%=Donor[i].pincode%></td>
+                    <td><%=Donor[i].phone%></td>
+                </tr>
+                <% count = count + 1}%>
+            </tbody>
+        </table>
+    </div>
+</div>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<%- include("partials/Status"); -%> 
+<%- include("partials/Status"); -%>
 
     <div class="container-fluid">
         <div class="row">
@@ -11,26 +11,20 @@
             </div>
             <div class="col col-lg-11">
                 <div class="container head">
-                    Blood Management System
+                    Status
                 </div>
             </div>
         </div>
-        
-<!-- Title of the page -->
-    </div>
-    <div class="container title">
-        Status
-    </div>
 
 <!-- Details -->
     <div class="container box">
         <div class="row">
             <div class="col col-lg-9" id="left">
-                ID: {ID}<br> <br>
-                Name: {Name}<br>
-                Date: {DD/MM/YYYY} <br>
-                Time: {HH:MM - HH:MM} <br>
-                Address: {Address} 
+                <b>ID:</b> <%=Recipient[0].r_id%><br> <br>
+                <b>Name:</b> <%=Recipient[0].name%><br>
+                <b>Phone:</b> <%=Recipient[0].phone%> <br>
+                <b>Hospital:</b> <%=Hospital[0].name%> <br>
+                <b>Address:</b> <%=Hospital[0].address%>-<%=Hospital[0].pincode%>
             </div>
             <div class="col col-lg-3" id="right">
                 <!-- <i class="fa-solid fa-person-circle-check fa-2x"></i>
@@ -38,9 +32,21 @@
                 Approved  -->
                 <div class="row"><br></div>
                 <div class="row"><br></div>
-                <div class="row"><div class="col"><i class="fa-solid fa-person-circle-check fa-2x"></i></div></div>
+                <div class="row"><div class="col">
+                    <% if(Recipient[0].status === true){ %>
+                        <td><i class="fa-solid fa-person-circle-check fa-2x"></i></td>
+                    <% }else{ %>
+                        <td><i class="fa-solid fa-hourglass-clock fa-2x"></i></td>
+                    <% } %>
+                </div></div>
                 <div class="row"><br></div>
-                <div class="row"><div class="col" id="text-status">A</div></div>
+                <div class="row"><div class="col" id="text-status">
+                    <% if(Recipient[0].status === true){ %>
+                        <td>Approved</td>
+                    <% }else{ %>
+                        <td>Pending</td>
+                    <% } %>
+                </div></div>
             </div>
         </div>
     </div>

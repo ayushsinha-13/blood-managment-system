@@ -1,0 +1,33 @@
+<%- include('Partials/Admin-Login'); -%>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col col-lg-1">
+            <div class="container nav-back-button">
+                <form action="/" method="get">
+                    <button><i class="fa-solid fa-circle-chevron-left fa-4x"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="col col-lg-11">
+            <div class="container head">
+                Admin
+            </div>
+        </div>
+    </div>
+
+    <div class="container login-form">
+        <form class="form" method="POST" action="/admin-login">
+             <div class="lg-3" id="username">
+                <input type="text" class="form-control" placeholder="Username" id="username" name="username" required>
+             </div>
+
+            <div class="lg-3" id="password">
+                <input type="password" class="form-control" placeholder="Password" id="password" name="password" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

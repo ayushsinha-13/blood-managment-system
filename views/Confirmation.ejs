@@ -1,9 +1,18 @@
-<%- include("partials/Confirmation"); -%> 
+<%- include("partials/Confirmation"); -%>
 
 <!-- Code Goes Here -->
-    <div class="container-fluid">
-        <div class="container head">
-            Blood Management System
+    <div class="row">
+        <div class="col col-lg-1">
+            <div class="container nav-back-button">
+                <form action="/" method="get">
+                    <button><i class="fa-solid fa-circle-chevron-left fa-4x"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="col col-lg-11">
+            <div class="container head">
+                Blood Management System
+            </div>
         </div>
     </div>
     <div class="container-fuild">
@@ -14,7 +23,7 @@
     </div>
     <div class="container-fluid crack">
         <div class="container-fluid id">
-            <span id="id">ID:</span> &nbsp;<span id="code">DO15465CD</span>
+            <span id="id">ID:</span> &nbsp;<span id="code"><%= ID %></span>
         </div>
     </div>
 </body>

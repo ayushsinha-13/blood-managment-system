@@ -1,4 +1,4 @@
-<%- include("partials/Donor"); -%> 
+<%- include("partials/Donor"); -%>
 
 <!-- Code Goes Here -->
 <div class="contianer-fluid">
@@ -12,32 +12,36 @@
         </div>
         <div class="col col-lg-11">
             <div class="container head">
-                Blood Management System
+                Donor - <%= Pincode %>
             </div>
         </div>
     </div>
 
-    <!-- Title of the page -->
-    <div class="container title">
-        Donor - {Pincode}
-    </div>   
-    
-    <div class="container list">
-        <div class="row box">
-            <div class="col col-lg-7" id="address">
-                ABC HOSPITAL <br>
-                01A, Delhi - 141002
-            </div>
-            <div class="col col-lg-3" id="rating">
-                <i class="fa-solid fa-star"></i>
-            </div>
-            <div class="col col-lg-2" id="button">
-                <form action="/" method="get">
-                    <button class="btn btn-primary">Select</button>
-                </form>
+
+    <% for(var i = 0; i<Hospital.length; i++){%>
+        <% if(Hospital[0].pincode === Pincode)%>
+        <div class="container list">
+            <div class="row box">
+                <div class="col col-lg-7" id="address">
+                    <div id="Hospital-Name">
+                        <%=Hospital[i].name%>
+                    </div>
+                    <%=Hospital[i].address%> - <%=Hospital[i].pincode%>
+                </div>
+                <div class="col col-lg-3" id="rating">
+                    <% for(var j=1; j<=Hospital[i].rating; j++){%>
+                    <i class="fa-solid fa-star"></i>
+                    <%}%>
+                </div>
+                <div class="col col-lg-2" id="button">
+                    <form action="/donor-pincode" method="post">
+                        <input type="text" name="hID" id="hID" style="display: none;" value="<%=Hospital[i].h_id%>">
+                        <button type="submit" class="btn btn-primary">Select</button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
+    <% } %> 
 </div>
 </body>
 </html>

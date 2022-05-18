@@ -1,11 +1,10 @@
-*{
-    background-color: #CDB699;
-}
 body{
-    background-color: #CDB699;
-    text-align: center;
+  background-color: #CDB699;
 }
-
+button{
+    border: 0;
+    background-color: #CDB699;
+}
 .head{
     /* background-color: red; */
     margin-top: 2rem;
@@ -17,8 +16,6 @@ body{
     border-radius: 10px;
     opacity: 90%;
     background-color: rgb(241, 59, 59);
-    /* background-color: rgb(255, 23, 0); */
-    /* background-color: deeppink; */
 }
 
 .image{
@@ -38,7 +35,7 @@ body{
     width: 40%;
     border-radius: 10px;
 
-    
+
 }
 #id{
     text-align: left;

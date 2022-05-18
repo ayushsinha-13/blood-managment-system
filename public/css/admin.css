@@ -1,0 +1,18 @@
+/* Login Form */
+.login-form{
+    margin-top: 5rem;
+    width: max-content;
+    background-color: #171212;
+    border-radius: 10%;
+    text-align: center;
+}
+.btn{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+#username{
+  padding-top: 1rem;
+}
+#password{
+  margin-top: 1rem;
+}
