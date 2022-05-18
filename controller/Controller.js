@@ -43,7 +43,7 @@ create_donor = async(req,res)=>{
       let count = found[0].Op + 1;
       await Hospital.findOneAndUpdate({h_id: hospital_ID}, {On: count})
     }
-  })
+  }).clone()
 
   const newDonor = new Donor({
     d_id: id,
@@ -68,13 +68,13 @@ create_donor = async(req,res)=>{
 get_donor = async(req,res)=>{
     Donor.find({}, (err, found)=>{
         res.render('Admin-Panel-Donor', {Donor: found})
-    })
+    }).clone()
 }
 get_donor_form = async(req,res)=>{
   const hospital_ID = req.body.hID
   await Hospital.find({h_id: hospital_ID}, (err,found)=>{
     res.render('Donor-Hospital-Form', {Hospital: found})
-  })
+  }).clone()
 }
 
 
@@ -117,7 +117,7 @@ create_recipient = async(req,res)=>{
       let count = found[0].Op - 1;
       await Hospital.findOneAndUpdate({h_id: hospital_ID}, {On: count})
     }
-  })
+  }).clone()
 
 const newRecipient = new Recipient({
       r_id: id,
@@ -144,7 +144,7 @@ get_recipient = async(req,res)=>{
     await Recipient.find({}, (err, found)=>{
       console.log(found)
         res.render('Admin-Panel-Recipient', {Recipient: found})
-    })
+    }).clone()
 }
 
 
@@ -160,8 +160,8 @@ get_status = async(req,res)=>{
         if(err){console.log("Error hai");}
         console.log("Hos = " + foundHospital)
         res.render('Status', {Recipient: foundRecipient, Hospital: foundHospital})
-      })
-  })
+      }).clone()
+  }).clone()
 }
 
 //
@@ -206,7 +206,7 @@ get_hospital_pincode = async(req,res)=>{
       console.log(err)
       res.render('Error')
     }
-  })
+  }).clone()
 }
 get_hospital_blood = async(req,res)=>{
   let blood = req.body.bloodGroup
@@ -250,13 +250,13 @@ get_hospital = async(req,res)=>{
       console.log(err)
       res.render('Error')
     }
-  })
+  }).clone()
 }
 get_hospital_ID = async(req,res)=> {
   const hospital_ID = req.body.hID
   await Hospital.find({h_id: hospital_ID}, (err,found)=>{
     res.render('Recipient-Hospital-Form', {Hospital: found})
-  })
+  }).clone()
 }
 
 //
@@ -285,7 +285,7 @@ get_details = async(req,res)=>{
       console.log(err)
       res.render('Error')
     }
-  })
+  }).clone()
 }
 approve_request = async(req,res)=>{
   const id = req.body.rID
