@@ -8,7 +8,7 @@ app.use(express.static("public"));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
-const port = 3000;
+const port = 3000 || process.env.PORT;
 
 // Database connection
 const connection = require('./database.js');
