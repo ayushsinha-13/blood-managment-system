@@ -239,7 +239,7 @@ get_hospital_blood = async(req,res)=>{
       console.log(err)
       res.render('Error')
     }
-  })
+  }).clone()
 }
 get_hospital = async(req,res)=>{
   await Hospital.find({}, (err, found)=>{
