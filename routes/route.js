@@ -1,5 +1,7 @@
 const express = require('express')
 const  https = require('https')
+const uniqid = require('uniqid')
+const controller = require('../controller/Controller')
 
 const app = express()
 
@@ -7,55 +9,47 @@ const app = express()
 app.set('view engine', 'ejs')
 app.use(express.urlencoded({extended: false}))
 
-
 app.route('/')
     .get((req,res)=> res.render("Home"))
 
 app.route('/status')
-    .get((req,res) => res.render('Status'))
+    .post(controller.get_status)
 
 app.route('/admin-login')
     .get((req,res)=> res.render('Admin-Login'))
-    .post((req,res)=> res.redirect('/admin-hospital'))
+    .post(controller.authenticate_admin)
 
 
 // ADMIN PANEL
  app.route('/admin-hospital')
-    .get((req,res) => res.render('Admin-Panel-Hospital'))
+    .get(controller.get_hospital)
+    .post(controller.create_hospital)
  app.route('/admin-donor')
-    .get((req,res) => res.render('Admin-Panel-Donor'))
+    .get(controller.get_donor)
  app.route('/admin-recipient')
-    .get((req,res) => res.render('Admin-Panel-Recipient'))
+    .get(controller.get_recipient)
  app.route('/admin-appointment')
-    .get((req,res) => res.render('Admin-Panel-Appointment'))
+    .get(controller.get_details)
+    .post(controller.approve_request)
 
-
-app.route('/confirmation')
-    .get((req,res)=> res.render('Confirmation'))
 
 // DONOR
 
 app.route('/donor')
-  .get((req,res)=> res.redirect('/'))
-  .post((req,res)=>{
-        const pincode = req.body.pincode
-        res.render('Donor-Hospital-List', {pincode: pincode})
-  })
+  .post(controller.get_hospital_pincode)
 app.route('/donor-form')
-  .get((req,res)=> res.render('Donor-Hospital-Form'))
-  .post((req,res)=> res.render('Confirmation'))
+  .post(controller.create_donor)
+app.route('/donor-pincode')
+  .post(controller.get_donor_form)
 
 // RECIPIENT
 
 app.route('/recipient')
-  .get((req,res)=> res.redirect('/'))
-  .post((req,res)=>{
-    const blood = req.body.bloodGroup
-    res.render('Recipient-Hospital-List', {blood: blood})
-  })
+  .post(controller.get_hospital_blood)
 app.route('/recipient-form')
-.get((req,res)=> res.render('Recipient-Hospital-Form'))
-.post((req,res)=> res.render('Confirmation'))
+  .post(controller.create_recipient)
+app.route('/recipient-hospital')
+  .post(controller.get_hospital_ID)
 
 
 // XXXXXXXXXXXXXXXXXXXXX

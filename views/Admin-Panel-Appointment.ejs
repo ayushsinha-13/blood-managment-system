@@ -14,26 +14,26 @@
                 </tr>
             </thead>
             <tbody>
+                <%var count = 1;%>
+                <%for(var i = Recipient.length - 1; i >= 0 ; i--){%>
                 <tr>
-                    <th scope="row">1</th>
-                    <td>John</td>
-                    <td>22222 55555</td>
-                    <td>ABC4102011</td>
-                    <td>Approved</td>
-                    <td><form action="/admin-appointment" method="post">
-                        <button type="submit"><i class="fa-solid fa-check"></i></button>
-                    </form></td>
+                    <th scope="row"><%=count%></th>
+                    <td><%=Recipient[i].name%></td>
+                    <td><%=Recipient[i].phone%></td>
+                    <td><%=Recipient[i].hospital_ID%></td>
+                    <% if(Recipient[i].status === true){ %>
+                        <td>Approved</td>
+                    <% }else{ %>
+                        <td>Pending</td>
+                    <% } %>
+                    <td>
+                        <form action="/admin-appointment" method="post">
+                            <input type="text" name="rID" id="rID" style="display: none;" value="<%=Recipient[i].r_id%>">
+                            <button type="submit"><i class="fa-solid fa-check"></i></button>
+                        </form>
+                    </td>
                 </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Rick</td>
-                    <td>77777 55555</td>
-                    <td>ABC4102011</td>
-                    <td>Pending</td>
-                    <td><form action="/admin-appointment" method="post">
-                        <button type="submit"><i class="fa-solid fa-check"></i></button>
-                    </form></td>
-                </tr>
+                <% count = count + 1}%>
             </tbody>
         </table>
     </div>

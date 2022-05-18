@@ -21,12 +21,12 @@
                                   <div>
                                     <div id="status">
                                         <i class="fa-solid fa-id-card fa-4x" id="person"></i>
-                                        <form action="/status" method="get">
+                                        <form action="/status" method="post">
                                             <div class="input-group mb-3">
                                                 <span class="input-group-text"><i class="fa-solid fa-hashtag fa-2x"></i></span>
-                                                <input type="text" class="form-control" id="id" placeholder="Enter ID">
+                                                <input type="text" class="form-control" name="id" id="id" placeholder="Enter ID">
                                             </div>
-                                            <button class="btn btn-primary" id="check">Check Status</button>
+                                            <button class="btn btn-primary" id="check" type="submit">Check Status</button>
                                         </form>
                                         <div id="admin">
                                             <form action="/admin-login" method="get">

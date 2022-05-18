@@ -2,6 +2,18 @@
 
 <!-- Code Goes Here -->
 
+<div class="container create-box">
+    <form action="/admin-hospital" method="post">
+
+        <input type="text" name="name" id="name" placeholder="Hospital Name">
+
+        <input type="text" name="address" id="address" placeholder="Address">
+
+        <input type="text" name="pincode" id="pincode" placeholder="pincode">
+        <button type="submit" class="btn btn-dark"><i class="fa-solid fa-plus"></i></button>
+    </form>
+</div>
+
     <div class="container table">
         <table class="table table-dark table-hover">
             <thead class="table-dark">
@@ -13,22 +25,19 @@
                 </tr>
             </thead>
             <tbody>
+                <%var count = 1;%>
+                <% for(var i=Hospital.length-1; i>=0; i--){%>
                 <tr>
-                    <th scope="row">1</th>
-                    <td>ABC</td>
-                    <td>Delhi-141002</td>
-                    <td>58</td>
+                    <th scope="row"><%=count%></th>
+                    <td><%=Hospital[i].name%></td>
+                    <td><%=Hospital[i].address%>-<%=Hospital[i].pincode%></td>
+                        <%var totalBlood = Hospital[i].Ap + Hospital[i].An + Hospital[i].Bp + Hospital[i].Bn + Hospital[i].Op + Hospital[i].On + Hospital[i].ABp + Hospital[i].ABn;%>
+                    <td><%=totalBlood%></td>
                 </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>XYZ</td>
-                    <td>New Delhi-141002</td>
-                    <td>23</td>
-                </tr>
+                <%count = count + 1;}%>
             </tbody>
         </table>
     </div>
-
 </div>
 </body>
 </html>

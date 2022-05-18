@@ -13,20 +13,16 @@
                 </tr>
             </thead>
             <tbody>
+                <%var count = 1;%>
+                <%for(var i = Donor.length - 1; i >= 0 ; i--){%>
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Harry</td>
-                    <td>AB+</td>
-                    <td>102012</td>
-                    <td>11111 00000</td>
+                    <th scope="row"><%=count%></th>
+                    <td><%=Donor[i].name%></td>
+                    <td><%=Donor[i].bloodGroup%></td>
+                    <td><%=Donor[i].pincode%></td>
+                    <td><%=Donor[i].phone%></td>
                 </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>John</td>
-                    <td>O-</td>
-                    <td>152416</td>
-                    <td>22222 55555</td>
-                </tr>
+                <% count = count + 1}%>
             </tbody>
         </table>
     </div>

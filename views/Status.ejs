@@ -20,11 +20,11 @@
     <div class="container box">
         <div class="row">
             <div class="col col-lg-9" id="left">
-                <b>ID:</b> DOABC4102011001<br> <br>
-                <b>Name:</b> John<br>
-                <b>Date:</b> 30/02/2022 <br>
-                <b>Time:</b> 10:30 - 13:00 <br>
-                <b>Address:</b> ABC, Delhi-410221
+                <b>ID:</b> <%=Recipient[0].r_id%><br> <br>
+                <b>Name:</b> <%=Recipient[0].name%><br>
+                <b>Phone:</b> <%=Recipient[0].phone%> <br>
+                <b>Hospital:</b> <%=Hospital[0].name%> <br>
+                <b>Address:</b> <%=Hospital[0].address%>-<%=Hospital[0].pincode%>
             </div>
             <div class="col col-lg-3" id="right">
                 <!-- <i class="fa-solid fa-person-circle-check fa-2x"></i>
@@ -32,9 +32,21 @@
                 Approved  -->
                 <div class="row"><br></div>
                 <div class="row"><br></div>
-                <div class="row"><div class="col"><i class="fa-solid fa-person-circle-check fa-2x"></i></div></div>
+                <div class="row"><div class="col">
+                    <% if(Recipient[0].status === true){ %>
+                        <td><i class="fa-solid fa-person-circle-check fa-2x"></i></td>
+                    <% }else{ %>
+                        <td><i class="fa-solid fa-hourglass-clock fa-2x"></i></td>
+                    <% } %>
+                </div></div>
                 <div class="row"><br></div>
-                <div class="row"><div class="col" id="text-status">Approved</div></div>
+                <div class="row"><div class="col" id="text-status">
+                    <% if(Recipient[0].status === true){ %>
+                        <td>Approved</td>
+                    <% }else{ %>
+                        <td>Pending</td>
+                    <% } %>
+                </div></div>
             </div>
         </div>
     </div>
